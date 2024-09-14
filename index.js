@@ -26,7 +26,9 @@ function fileToGenerativePart(file) {
 }
 
 // POST endpoint to read a file (image or PDF)
+
 app.post("/read-file", upload.single("file"), async (req, res) => {
+
   try {
     const file = req.file;
     if (!file) {
